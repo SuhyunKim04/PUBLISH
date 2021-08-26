@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table & Tags</title>
+</head>
+<style>
+    table {
+            border-collapse:collapse;
+        }
+
+    th, td {
+            border:1px solid pink;
+            padding:20px;
+            text-align: center;
+        }
+
+</style>
+<body>
+    <caption>Table</caption>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Day</th>
+                <th scope="col">Monday</th>
+                <th scope="col">Tuseday</th>
+                <th scope="col">Wednsday</th>
+                <th scope="col">Thursday</th>
+                <th scope="col">Friday</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th scope="row">Time</th>
+                <td>1pm</td>
+                <td>2pm</td>
+                <td>3pm</td>
+                <td>4pm</td>
+                <td>5pm</td>
+            </tr>
+        </tfoot>
+        <tbody>
+             <tr>
+                <th scope="row">Subject</th>
+                <td>Math</td>
+                <td>Korean</td>
+                <td>Music</td>
+                <td>Art</td>
+                <td>Computer</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>Tags</h1>
+        <ul>
+            <li>Bread</li>
+                <ol>
+                    <li>macarons</li>
+                    <li>muffins</li>
+                </ol>
+        </ul>
+        <ol>
+            <li>fruits</li>
+            <ul>
+                <li>orange</li>
+                <li>pear</li>
+            </ul>
+            <ol>
+                <li>apple</li>
+                <li>water melon</li>
+            </ol>
+        </ol>
+
+        <dl>
+            <dt>A-D</dt>
+            <dd>Apple</dd>
+            <dd>Banana</dd>
+            <dd>Coconut</dd>
+            <dd>Dates</dd>
+        </dl>
+        <abbr title="This is fruits">Coconut</abbr> is big.
+</body>
+</html>
+
