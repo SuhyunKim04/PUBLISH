@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size:12px;
+        }
+ 
+        table {
+            border-collapse:collapse;
+            border-spacing:0;
+            width:600px;
+        }
+        th, td {
+            border:1px solid #333;
+            padding:10px;
+        }
+
+        .tBox thead {background-color:olive;color:#fff;}
+        .tBox caption {
+            margin-bottom:20px;
+            font-family:sans-serif;
+            font-size:30px;
+            text-align:right;
+        }
+
+        .tBox tbody {
+            border-bottom:3px double #000;
+        }
+        .tBox tbody:nth-of-type(2) {
+            background-color:#f3f3f3;
+        }
+    </style>
+</head>
+<body> 
+    <table class="tBox">
+        <caption>
+            html tag list &lt;h1&gt;&lt;/h1&gt;
+        </caption>
+        <colgroup>
+            <col style="width:150px;background-color:beige" span="2">  
+            <col style="width:300px;">
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">주주명</th>
+                <th scope="col">지분율</th>
+                <th scope="col">주식수</th>
+            </tr>
+        </thead> 
+        <tfoot>
+            <tr>
+                <th scope="row">발행주식 총수</th>
+                <td>100%</td>
+                <td>163,263,395</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <th scope="row">외국인</th>
+                <td>56.7%</td>
+                <td>93,160,410</td>
+            </tr>
+            <tr>
+                <th scope="row">최대주주(국민연금)</th>
+                <td>11.6%</td>
+                <td>18,985,923</td>
+            </tr>
+            <tr>
+                <th scope="row">변대규 의장</th>
+                <td>&nbsp;</td>
+                <td>
+                    <ul>
+                        <li><a href="#">서울대학교 대학원 제어계측공학 <i>박사</i></a></li>
+                        <li>휴맥스 <b>대표이사</b></li>
+                        <li><strong>SK 텔레콤</strong>사외이사</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <th scope="row">외국인</th>
+                <td>56.7%</td>
+                <td>93,160,410</td>
+            </tr>
+            <tr>
+                <th scope="row">최대주주(국민연금)</th>
+                <td>11.6%</td>
+                <td>18,985,923</td>
+            </tr>
+            <tr>
+                <th scope="row">변대규 의장</th>
+                <td>&nbsp;</td>
+                <td>
+                    <ul>
+                        <li><a href="#">서울대학교 대학원 제어계측공학 <i>박사</i></a></li>
+                        <li>휴맥스 <b>대표이사</b></li>
+                        <li><strong>SK 텔레콤</strong>사외이사</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <footer> &amp;
+        <p>&copy; copyrights 2021 suhyun All rights reserved.</p>
+    </footer>
+</body>
+</html>

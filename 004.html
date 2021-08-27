@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size:12px;
+        }
+        
+        table {
+            border-collapse:collapse;
+            border-spacing:0;
+            text-align: center;
+            width:50%;
+            margin: 50px 0;
+        }
+        th, td {
+            border:1px solid #333;
+            padding:10px;
+        }
+        .table4 {
+            width: 100%;
+        }
+        </style>
+</head>
+<body>
+    <table>
+        <caption>열병합</caption>
+        <tr>
+            <td colspan="2">Hello</td>
+            <td>C</td>
+        </tr>
+        <tr>
+            <td>D</td>
+            <td>E</td>
+            <td>F</td>
+        </tr>
+        <tr>
+            <td colspan="3">World</td>
+            
+        </tr>
+    </table>
+    <table>
+        <caption>행병합</caption>
+        <tr>
+            <td rowspan="2">A</td>
+            <td>B</td>
+            <td rowspan="3">Hello</td>
+        </tr>
+        <tr>
+            <td>E</td>
+        </tr>
+        <tr>
+            <td>G</td>
+            <td>H</td>
+        </tr>
+    </table>
+    <table>
+        <caption>열,행병합</caption>
+        <tr>
+            <td rowspan="2" colspan="2">Name</td>
+            <td colspan="2">Title</td>
+            
+        </tr>
+        <tr>
+            <td>E</td>
+            <td>F</td>
+        </tr>
+        <tr>
+            <td>J</td>
+            <td>G</td>
+            <td>H</td>
+            <td>I</td>
+        </tr>
+    </table>
+    <table class="table4">
+        <caption>이력서</caption>
+        <colgroup>
+            <col style="width:100px" span="2"> 
+            <col style="width: 20%;">
+            <col style="width: 100px;">
+            <col style="width: auto"> 
+        </colgroup>
+        <tbody>
+            <tr>
+                <th scope="col" colspan="5">기본정보</th>
+            </tr>
+            <tr>
+                <td rowspan="4">사진</td>
+                <th scope="row">이름</th>
+                <td colspan="3">-</td>
+            </tr>
+            <tr>
+                <th scope="row">주민번호</th>
+                <td>-</td>
+                <th scope="row">성별</th>
+                <td>-</td>
+            </tr>
+            <tr>
+                <th scope="row" rowspan="2">주소</th>
+                <td colspan="3">-</td>
+            </tr>
+            <tr>
+                <td colspan="3">-</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <th scope="row">MEMO</th>
+                <td colspan="4">
+                    <table>
+                        <tr>
+                            <td>A</td>
+                            <td>A</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td>A</td>
+                            <td>A</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <caption>열,행병합</caption>
+        <tr>
+            <th scope="col" rowspan="2">제품명</th>
+            <th scope="col" colspan="2" id="n">농심</th>
+            <th scope="col" colspan="2" id="l">롯데</th>
+            
+        </tr>
+        <tr>
+            <th scope="col" id="snack1">새우깡</th>
+            <th scope="col" id="snack2">감자깡</th>
+            <th scope="col" id="snack3">쵸코파이</th>
+            <th scope="col" id="snack4">롯데샌드</th>
+        </tr>
+        <tr> 
+            <th scope="row" id="t1">트랜스지방</th>
+            <td headers="n snack1 t1">3.5%</td>
+            <td>1.2%</td>
+            <td>3.5%</td>
+            <td>1.2%</td>
+        </tr>
+        <tr> 
+            <th scope="row" id="t2">탄수화물</th>
+            <td>3.5%</td>
+            <td>1.2%</td>
+            <td headers="l snack3 t2">3.5%</td>
+            <td>1.2%</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       p:first-child { color:red;}
+       p:nth-child(4) { font-size:50px;}
+       p:nth-of-type(2) {color:orange;}
+       strong:nth-of-type(2) {background:pink;}
+       p:nth-last-child(2) {
+           font-size:100px;
+       } 
+       p:nth-last-of-type(1) {
+           background:red;
+       }
+
+       li:nth-child(even) {
+           background:beige;
+       }
+
+       li:nth-child(odd) {
+           background:coral;
+       }
+    </style>
+</head>
+<body>
+    <div>
+        <em>EM</em>
+        <p>Paragraph 1</p>
+        <strong>STRONG</strong>
+        <p>Paragraph 2</p>
+        <p>HELLO WORLD</p>
+        <strong>Italic</strong>
+    </div>
+    <div>
+        <em>EM</em>
+        <p>Paragraph 1</p>
+        <strong>STRONG</strong>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
+        <i>Italic</i>
+    </div>
+    <hr>
+<strong>CSS SELECTOR</strong>
+<div> 
+    <h1>CSS Selectors</h1>
+    <ul class="first">
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+        <li>list5</li>
+    </ul>
+    <ul>
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+        <li>
+            <h2>list5</h2>
+            <p>Paragraph</p>
+        </li>
+    </ul>
+</div>
+
+ 
+</body>
+</html>
