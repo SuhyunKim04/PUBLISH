@@ -15,30 +15,49 @@
             border-collapse:collapse;
             border-spacing:0;
             text-align: center;
-            width:50%;
-            margin: 50px 0;
+            width:870px;
+            box-sizing:border-box;
+            margin-top:-1px;
+            table-layout:fixed;
+            word-break:break-all;
         }
         th, td {
             border:1px solid #333;
             padding:10px;
         }
-        .table {
-            width: 100%;
+        .first {
+            margin-top:0;
         }
+    
+        .msg {
+            width:300px;
+            outline:1px solid red;
+            word-break:break-all;
+        }
+         
     </style>
 </head>
 <body>
-    <table>
-        <tbody>
+    <p class="msg">
+        2021.07.302021.07.302021.07.302021.07.302021.07.302021.07.302021.07.302021.07.302021.07.30
+    </p>
+ 
+    <table class="first"> 
+        <colgroup>
+            <col style="width:20%;"> 
+            <col style="width:200px;" span="2">
+            <col style="width:20%;">
+            <col style="width:calc(60% - 400px);"> 
+        </colgroup>
         <tr>
             <td colspan="4" rowspan="2">장기요양급여비용 영수증</td>
             <td>출력일</td>
         </tr>
         <tr>
-            <td>2021.07.30</td>
+            <td>http://www.naver.com/main/static/src/asset/index.html</td>
         </tr>
         <tr>
-            <td>장기요양<br>기관기호</td>
+            <th scope="row">장기요양<br>기관기호</th>
             <td colspan="2">34122000139</td>
             <td>장기요양기관명</td>
             <td>(주)동부케어 평택점</td>
@@ -60,10 +79,15 @@
             <td>L1801122619</td>
             <td>-</td>
             <td colspan="2">-</td>
-        </tr>
-        </tbody>
+        </tr> 
     </table>
     <table>
+        <colgroup>
+            <col style="width: 50px;">
+            <col style= "width: 70px;">
+            <col style= "width: 100px;" span="5">
+            <col style= "width: auto;">
+        </colgroup>
         <tbody>
             <tr>
                 <th colspan="3">항목</th>
@@ -165,28 +189,26 @@
             </tr>
         </tbody>
     </table>
-    <table>
-        <tfoot>
-            <tr>
-                <td rowspan="2">신용카드를<br>시용하실때</td>
-                <td>회원번호</td>
-                <td>-</td>
-                <td>승인번호</td>
-                <td>-</td>
-                <td>할부</td>
-                <td>-</td>
-                <td>사용금액</td>
-            </tr>
-            <tr>
-                <td>카드종류</td>
-                <td>-</td>
-                <td>유효기간</td>
-                <td>-</td>
-                <td>가맹점번호</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-        </tfoot>
+    <table>  
+        <tr>
+            <td rowspan="2">신용카드를<br>시용하실때</td>
+            <td>회원번호</td>
+            <td>-</td>
+            <td>승인번호</td>
+            <td>-</td>
+            <td>할부</td>
+            <td>-</td>
+            <td>사용금액</td>
+        </tr>
+        <tr>
+            <td>카드종류</td>
+            <td>-</td>
+            <td>유효기간</td>
+            <td>-</td>
+            <td>가맹점번호</td>
+            <td>-</td>
+            <td>-</td>
+        </tr> 
     </table>
 </body>
 </html>

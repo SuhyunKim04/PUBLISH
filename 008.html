@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        strong {
+            font-weight:600;
+            color:olivedrab;
+        }
+
+        .terms, textarea {
+            height:100px;
+            border:1px solid #ddd;
+            padding:10px;
+            font-size:12px;
+            font-family:tahoma, sans-serif;
+            color:#777;
+            overflow:auto;
+            /*
+            overflow-y:auto;
+            overflow-x:hidden;
+            */
+        }
+
+        textarea {
+            width:100%;
+            box-sizing:border-box;
+        }
+
+        .terms ul {
+            list-style-type:square;
+        }
+
+        .terms li {
+            margin:10px 0;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <form action="javascript:done();">
+        <fieldset>
+            <legend>MEMBER INFO</legend>
+            <ul>
+                <li>
+                    <label for="user-id">Username</label>
+                    <input type="text" id="user-id" required>
+                </li>
+        
+                <li>
+                    <label for="user-pw1">Password</label>
+                    <input type="password" id="user-pw1" minlength="8" maxlength="13" placeholder="8~13" required>
+                </li>
+        
+                <li>
+                    <label for="user-pw2">Password Confirm</label>
+                    <input type="password" id="user-pw2" required>
+                </li>
+        
+                <li>
+                    <label for="user-name">Name</label>
+                    <input type="text" id="user-name" placeholder="First Name">
+                    <input type="text" placeholder="Last Name">
+                </li>
+        
+                <li>
+                    <label for="user-birth">DOB</label>
+                    <input type="text" id="user-birth" placeholder="Year(4dgt)">
+                    <select multiple size="5">
+                        <option>Month</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                    <input type="text" placeholder="Day">
+                </li>
+
+                <li>
+                    <label for="user-addr">Address</label>
+                    <select> 
+                        <optgroup label="Seoul">
+                            <option>GUrogu</option>
+                            <option>Sihugn..</option> 
+                        </optgroup>
+                        <optgroup label="Pusan">
+                            <option>don</option>
+                            <option>ddd</option>
+                        </optgroup>
+                        <optgroup label="Jeju">
+                            <option>Jejusi</option>
+                            <option>Segui..</option>
+                        </optgroup>
+                        
+                    </select>
+                </li>
+        
+                <li>
+                    <strong>Gender</strong>
+                    <input type="radio" name="user-gender" id="user-gender1" checked>
+                    <label for="user-gender1">Female</label>
+                    <input type="radio" name="user-gender" id="user-gender2">
+                    <label for="user-gender2">Male</label>
+                    <input type="radio" name="user-gender" id="user-gender3">
+                    <label for="user-gender3">Others</label>
+                </li>
+        
+                <li>
+                    <strong>Event email</strong>
+                    <input type="radio" name="user-event" id="user-event1">
+                    <label for="user-event1">Yes</label>
+                    <input type="radio" name="user-event" id="user-event2" checked>
+                    <label for="user-event2">No</label>
+                </li>
+        
+                <li>
+                    <label for="user-email">Recovery E-mail</label>
+                    <input type="email" id="user-email" placeholder="Optional">
+                </li>
+
+                <li>
+                    <label for="user-phone">Mobile Phone</label>
+                    <select>
+                        <option>America</option>
+                        <option selected>Korea</option>
+                        <option>Canada</option>
+                    </select>
+                    <input type="tel" placeholder="Enter Phone Number">
+                    <button type="button">Send Code</button>
+                    <input type="text" placeholder="Enter verification code" disabled>
+                </li>
+                <li>
+                    <textarea readonly><strong>1. Collected Personal Information</strong>
+                        Users may now access the majority of NAVER services available to members, such as information searches or viewing news articles, without the need to sign up for membership. Where a user signs up with NAVER to access personalized or membership services, including email, calendar, café, or blog services, only a minimal amount of personal information required for service use is collected.
+
+The personal information collected by NAVER at the time of signing up for membership is provided below. 
+                    </textarea>
+                </li>
+
+                <li>
+                    <input type="checkbox" id="terms-service">
+                    <label for="terms-service">Terms of Service(required)</label>
+                </li>
+                <li>
+                    <strong>Favorite colors?</strong>
+                    <label>
+                        <input type="checkbox" name="color" value="1">
+                        <span>RED</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="color" value="2">
+                        <span>BLUE</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="color" value="3">
+                        <span>GREEN</span>
+                    </label>
+                </li>
+                <li>
+                    <strong>Hate colors?</strong>
+                    <label>
+                        <input type="checkbox" name="hate-color" value="1">
+                        <span>RED</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="hate-color" value="2">
+                        <span>BLUE</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="hate-color" value="3">
+                        <span>GREEN</span>
+                    </label>
+                </li>
+
+                <li>
+
+                    
+                    <div class="terms">
+                        <strong>1. Collected Personal Information</strong>
+<p>
+    Users may now access the majority of NAVER services available to members, such as information searches or viewing news articles, without the need to sign up for membership. Where a user signs up with NAVER to access personalized or membership services, including email, calendar, café, or blog services, only a minimal amount of personal information required for service use is collected.
+</p>
+
+<b>
+    The personal information collected by NAVER at the time of signing up for membership is provided below.
+</b>
+<ul>
+    <li>
+        When a user signs up to NAVER, user ID, password, name, date of birth, gender, and mobile phone number used for membership verification are required for collection. If the date of birth provided by the user indicates that a user is a minor under the age of 14, the information of the legal representative, including his/her name, date of birth, gender, duplication information (DI) and mobile phone number, is also collected. The user may choose whether to provide his/her email address, profile information.
+    </li>
+    <li>
+        When an organization signs up to NAVER, the organization’s ID, password, official name, email address, and mobile phone number used for membership verification are required for collection. The name of the organization’s representative may also be optionally collected at the discretion of NAVER members.
+The following personal information is c
+    </li>
+</ul>
+                    </div>
+                </li>
+                <li>
+                    <label for="user-docs">Documents</label>
+                    <input type="file" id="user-docs">
+                </li>
+                <li>
+                    <label for="user-date">Date</label>
+                    <input type="date">
+                    <input type="color">
+                    <input type="time">
+                    <input type="meter">
+                    <input type="number" step="2" start="10">
+                </li>
+                <li>
+                    hidden type
+                    <input type="hidden">
+                </li>
+                <li>
+                    <label for="disk_c">Disk usage C:</label>
+                    <meter id="disk_c" value="9" min="0" max="10">2 out of 10</meter><br>
+                </li>
+                <li>
+                    <label for="points">Points (between 0 and 10):</label>
+                    <input type="range" id="points" name="points" min="0" max="100" step="10">
+                </li>
+        
+        
+            </ul>
+        </fieldset>
+        <button type="button">CANCLE</button>
+        <button type="reset">RESET</button>
+        <button type="submit">DONE</button>
+    </form>
+
+    <script>
+        function done() {
+            alert('Welcome!')
+        }
+    </script>
+
+</body>
+</html>

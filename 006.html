@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin:0;padding:0;
+        }
+        ul {
+            display:flex;
+            list-style:none;
+            align-items:flex-start;
+            flex-wrap:wrap;
+            justify-content: space-between;
+            max-width:1000px;
+            margin:50px auto;
+        }
+
+        li {
+            width:24%;
+            margin-bottom:30px;
+        
+            outline:1px solid red;
+        }
+
+        li:nth-child(4n - 3) {
+            background-color:beige;
+        }
+        li:nth-child(2n){
+            color: red;
+        }
+
+        li:nth-child(odd){
+            /* font-size:30px; */
+        }
+
+        li:nth-child(3n){
+            /* background:olivedrab; */
+        }
+
+        li:nth-last-child(2) {
+            background-color:yellow;
+        }
+        li:nth-child(2) {
+            background-color:pink;
+        }
+
+        li:first-child {
+            height:300px;
+        }
+
+        li:last-child {
+            height:200px;
+        }
+
+        li:nth-child(-n+2) {
+            border-top:10px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>List 1</li>
+        <li>List 2</li>
+        <li>List 3</li>
+        <li>List 4</li>
+        <li>List 5</li>
+        <li>List 6</li>
+        <li>List 7</li>
+        <li>List 8</li>
+        <li>List 9</li> 
+    </ul>
+</body>
+</html>

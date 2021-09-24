@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="result.html" method="GET">
+        <fieldset>
+            <legend>Search</legend>
+            <select>
+                <option>Total</option>
+                <option>BLog</option>
+                <option>Cafe</option>
+            </select>
+            <input type="search" placeholder="Enter words" required>
+            <button type="submit">SEARCH</button>
+            <button type="reset">RESET</button>
+            <button type="button">BUTTON</button>
+        </fieldset>
+    </form>
+
+    <select>
+        <option>English</option>
+        <option>한국어</option>
+    </select>
+
+    <form action="login.html">
+       <fieldset>
+           <legend>LOG IN</legend>
+           <label>
+                Username
+                <input type="text" placeholder="Username" required>
+            </label> 
+    
+            <label for="user_pw">Password</label>
+            <input type="password" placeholder="Password" id="user_pw" required>
+    
+            <input type="checkbox" id="autoLogin">
+            <label for="autoLogin">Stay Signed in</label> 
+
+            <button type="submit">
+                Sign in  
+            </button>
+
+            <input type="submit" value="LOGIN">
+            <input type="reset" value="RESET">
+            <input type="button" value="BUTTON">
+            <input type="image" src="./images/dummy_1.jpg" alt="">
+       </fieldset>
+    </form>
+</body>
+</html>
