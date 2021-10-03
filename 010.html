@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p:first-child { color:Red; }
+        p:last-child { color:blue;}
+        h2:first-child { color:green;}
+        h2:last-child { color:Orange;}
+
+        p:first-of-type {color:violet;}
+        p:last-of-type { color:olivedrab;}
+        p:nth-of-type(3) { color:orange;}
+        p:nth-child(4) { font-size:50px;}
+
+        h2:not(:nth-child(odd)) { font-size: 50px;}
+
+        .gnb li:not(:first-child) {
+            border-top:1px solid red; 
+        } 
+
+        .wrap > h2,
+        .wrap > p ,
+        .wrap > div  {
+            border:1px solid red;
+        }
+
+        .wrap > * {
+            border-radius:10px;
+        }
+
+        .gnb li:before {
+            content:'-';
+            color:red;
+            margin-right:10px;
+        }
+
+        .gnb li:after {
+            content:'**';
+            font-size:30px;
+            background:yellow;
+        }
+    </style>
+</head>
+<body>
+    <ul class="gnb">
+        <li>MENU</li>
+        <li>MENU</li>
+        <li>MENU</li>
+        <li>MENU</li>
+        <li>MENU</li>
+        <li>MENU</li>
+    </ul>
+    <div class="wrap">
+        <h2>TITLE</h2>
+        <p>Hello world 1</p>
+        <div>
+            <p>Hello world 2</p> 
+            <strong>STRONG</strong>
+            <p>Hello world 3</p>
+            <p>Hello world 4</p>
+            <p>Hello world 5</p>
+            <h2>TITLE</h2>
+            <h2>TITLE</h2>
+            <h2>TITLE</h2>
+        </div> 
+    </div> 
+</body>
+</html>

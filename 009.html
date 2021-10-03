@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* a:link  { color:green;  }
+        a:visited { color:black;text-decoration:underline;}
+        a:hover { color:red; }
+        a:active { background-color:yellow;} */
+
+        a { color:inherit; text-decoration:none;}
+        a:hover { color:Red; text-decoration:underline;}
+
+        .btn {
+            display:block;
+            width:200px;
+            padding:12px 40px;
+            background:dodgerblue;
+            border-radius:3px;
+            text-align:center;
+            color:#fff
+        }
+
+        .btn:active {
+            background:maroon;
+        }
+ 
+        p:first-letter {
+            font-size:50px;
+            color:dodgerblue;
+        }
+
+        /* p:first-line {
+            color:dodgerblue;
+        } */
+
+        input:disabled {
+            background-color:Gray;
+        }
+
+        .wrap p { color:red; }
+        .wrap > p { font-style:italic;}
+        .wrap  + p {
+            background:yellow;
+        }
+
+        input:checked + strong {
+             color:red;
+        }
+
+        .chkBtn {
+                margin:40px;
+                border:1px solid #d8d8d8;
+                padding:20px; 
+        }
+
+        .chkBtn label {
+            display:inline-block;
+            width:150px;
+            background-color:#f1f1f1;
+            border:1px solid #eee;
+            border-radius:5px;
+            height:40px;
+            line-height:40px;
+            text-align:center;
+        }
+
+        .chkBtn input {
+            position:absolute;
+            width:1px;height:1px;overflow:hidden;
+            z-index:-1;
+        }
+
+        .chkBtn input:checked + label {
+            background-color:dodgerblue;
+            color:#fff;
+        }
+
+        p:lang(fr) {
+            font-size:100px;
+        }
+
+        input:focus {
+           outline:2px solid red;
+           background-color:yellow;
+        }
+    </style>
+</head>
+<body>
+    <p lang="ko">KOREAN</p>
+    <p lang="jp">JAPAN</p>
+    <p>SIBLINGS PREV</p>
+    <div class="wrap">
+        <p>CHILD P</p>
+        <div>
+            <p>Decendent P</p>
+        </div>
+    </div>
+    <p>
+        SIBLINGS NEXT
+    </p>
+    <hr>
+    <input type="text" disabled><hr>
+    <input type="text"><hr>
+    <input type="checkbox" checked><strong>CHECKBOX</strong><hr>
+    <input type="radio"><strong>RADIO</strong><hr>
+    <div class="chkBtn"> 
+         
+        <input type="radio" id="a" name="gender">
+        <label for="a">FEMALE</label>
+        <input type="radio" id="b" name="gender">
+        <label for="b">MALE</label>
+
+    </div>
+    <p>
+        Orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+    <a href="./001.html">LINK 1</a>
+    <a href="./002.html">LINK 2</a>
+    <a href="#3">LINK 3</a>
+    <a href="#4" class="btn">LINK 4</a>
+</body>
+</html>
