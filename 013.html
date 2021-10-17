@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        .wrap {
+            width:80%;height:500px;
+            margin:50px auto;
+            outline:1px solid red;
+            position:relative;
+            /* overflow:hidden; */
+        }
+       
+
+        .box {
+            position:absolute;
+            top:calc(50% - 50px);width:100px;height:100px;  
+        }
+
+        .box.a {
+            background-color:rgba(255,0,0,0.8); 
+            left:0;
+            transition:left 0.5s, width 0.5s 0.5s, background-color 2s 1s,top 0.5s 3s;
+        }
+
+        .wrap:hover .a {
+            left:200px;
+            width:200px;
+            background-color:blue;
+            top:-100px;
+        }
+
+        .box.b {
+             
+            background-color:rgba(0,255,0,0.8);
+            /* transition-property:background-color, transform;
+            transition-duration:0.5s, 1s;
+            transition-delay:0s, 1s; */
+            /* transition:all 0.5s; */
+            /* transition-property: all;
+            transition-duration: 0.5s;
+            transition-timing-function:cubic-bezier(0.455, 0.03, 0.515, 0.955);
+            transition-delay:0.5s; */
+
+            transition:all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.5s;
+            transform-origin:left top; 
+            box-sizing:border-box;
+            left:0;
+        }
+
+        .wrap:h over .b {
+            /* transform:translate(80px,80px) rotate(360deg) scale(1.5); */
+            /* transform:skew(-45deg); */
+            /* transform:translateX(300px); */
+            background-color:rgba(0,0,255,0.8);
+            text-decoration:underline; 
+            left:100px;
+        }
+
+        .knife {
+            position:absolute;
+            right:-100px;
+            top:200px;
+            background-color:#000;
+            width:100px;
+            height:20px;
+            /* transition-property:right, transform, background-color;
+            transition-duration:0.5s;
+            transition-delay:0s,0s, 0.7s; */
+            transform-origin:left center; 
+            transition:right 0.5s, transform 0.5s, background-color 0.5s 0.7s;
+        }
+
+        .wr ap:hover .knife {
+            right:50%;u
+            transform:rotate(-1080deg);
+            background-color:red;
+        }
+
+        a {
+            display:block;
+            height:80px;
+            line-height:80px;
+            background-color:#333;
+            color:#fff;
+            border-radius:50px;
+            width:200px;margin:50px auto;
+            text-decoration:none;
+            box-sizing:border-box;
+            text-align:center;
+            /* transition:all 0.5s; */
+            transition-property:all;
+            transition-duration:0.5s;
+        }
+
+        a:hover {
+            background-color:red;
+            padding-left:20px;
+            border-radius:0; 
+        }
+
+        .txtAni {
+            position:relative;
+            border:1px solid dodgerblue;
+            border-radius:10px;
+            margin:70px;
+            text-align:center;
+            height:200px;
+
+        }
+
+        .txtAni p {
+            font-size:30px; 
+            position:absolute;
+            left:0;
+            bottom:60px;
+            width:100%;
+        }
+
+        .txtAni .a {
+            color:#e8e8e8;
+        }
+
+        .txtAni .b {
+            color:dodgerblue; 
+        }
+
+    </style>
+</head>
+<body> 
+    <div class="txtAni">
+        <p class="a">Transitions</p>
+        <p class="b">Transitions</p>
+    </div>
+    <a href="#">BUTTON</a>
+    <div class="wrap">
+        <div class="box a">BASE</div>
+        <div class="box b">TARGET</div>
+        <div class="knife"></div>
+    </div>
+</body>
+</html>

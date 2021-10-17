@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        a {
+            color:inherit; text-decoration:none;
+            outline:1px solid red;
+            padding:20px;
+        }
+    
+        .btnHam {  
+            display:block; 
+            width:38px;  
+            margin:50px;
+        }
+
+        .btnHam span {
+            display:block;
+            background-color:#000;
+            height:5px;
+            transition: all 0.5s; 
+            width:100%;
+        }
+
+        .btnHam span:first-child { background:dodgerblue;}
+        .btnHam span:nth-child(2) {
+            margin:7px 0;
+            background-color:coral;
+        }
+        .btnHam span:last-child { background:olivedrab;}
+
+        .a {
+            transform-origin: left top; 
+        }
+
+        .btnHam .b {
+            transform-origin:center right;
+            transition-delay:0.5s;
+        }
+
+        .c {
+            transform-origin: left bottom; 
+        }
+       
+        .btnHam:hover .a {
+            transform: rotate(35deg) translateX(5px) ;
+            
+
+        }
+        .btnHam:hover .b {
+            transform:scaleX(0);
+        }
+        .btnHam:hover .c {
+            transform:  rotate(-35deg) translateX(5px);
+             
+        }
+
+        .box {
+            width:80%;height:500px;
+            border:1px solid red;
+            margin:50px auto;
+            position:relative;
+        }
+
+        .square {
+            position:absolute;
+            left:0;top:0;
+            width:50px;height:50px;
+            background:blue;
+            /* animation-name:around;
+            animation-duration:4s;
+            animation-iteration-count: infinite; */
+            animation:around 4s infinite 0.4s;
+
+        }
+
+        .box:hover .square {
+            animation-play-state: paused;
+        }
+
+        .ball {
+            position:absolute;
+            left:0;top:0;
+            width:50px;height:50px;
+            background:red;
+            border-radius:50%;
+            transition:all 0.5s;
+            
+        }
+
+        .box:hover .ball {
+            animation-name:around;
+            animation-duration:4s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes around {
+            0% { left:0; top:0; background:red;}
+            25%,75% { left:calc(100% - 50px); top:0;background:orange; }
+            76% { left:calc(100% - 50px); top:calc(100% - 50px); background:green;}
+            90% { left:0; top:calc(100% - 50px);background:pink;}
+            100% { left:0; top:0;background:blue;}
+        }
+
+    </style>
+</head>
+<body> 
+    <div class="box">
+        <div class="square"></div>
+        <div class="ball"></div>
+    </div>
+    <a href="#" class="btnHam">
+        <span class="a"></span>
+        <span class="b"></span>
+        <span class="c"></span>
+    </a>
+    <a href="#" class="btnHam on">
+        <span class="a"></span>
+        <span class="b"></span>
+        <span class="c"></span>
+    </a>
+
+    
+
+</body>
+</html>

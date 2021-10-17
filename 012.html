@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       /* div { color:red ; background-color:yellow; font-size:30px;} */
+       div span { color:green; } /* 0,0,0,2 */
+       /*.box span { color:pink;}  0,0,1,1 */
+       p span { color:orange;}  /* 0,0,0,2 */
+       span { color: blue; }  /* 0,0,0,1 */
+       div.contain .inner .box p { color:red; } /* 0,0,3,2 */
+       .contain .inner .box p { color:blue; } /* 0,0,3,1 */
+       .contain p:hover { color:blue;} /* 0,0,2,1 */
+    </style>
+</head>
+<body>
+    <div class="contain"><div class="inner"><div class="box"><p>HELLO</p></div>
+    <!-- 
+    1. external style sheet ( *.css )
+    2. internal style sheet ( <style> tag </style>)
+    3. inline style sheet ( style attribute )
+    -->
+    <!-- tag < class < id < inline style sheet < !important flag -->
+
+    tag     0,0,0,1
+    class   0,0,1,0
+    id      0,1,0,0
+    inline  1,0,0,0
+
+
+    <div class="box" id="box">
+        <p><span>HELLO WORLD</span></p>
+        <b>Good morning</b>
+        <p>Good night!</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+    
+
+        .txtAni {
+            position:relative;
+            border:1px solid dodgerblue;
+            border-radius:10px;
+            margin:70px;
+            text-align:center;
+            height:200px;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .txtAni p {
+            font-size:30px; 
+            position:absolute;
+            left:0;
+            width:100%;
+        }
+
+        .txtAni .a {
+            color:#e8e8e8; 
+            bottom:60px;
+        }
+
+        .txtAni .b {
+            color:dodgerblue;  
+            bottom:-150px;
+            transition: all 1s;
+            
+        }
+
+        .txtAni:hover .b{
+           bottom: 60px;
+
+
+        }
+
+    </style>
+</head>
+<body> 
+    <div class="txtAni">
+        <p class="a">Transitions</p>
+        <p class="b">Transitions</p>
+    </div>
+</body>
+</html>
