@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+@import 'mixin','reset';
+body {
+    font-family:'NanumSquare',sans-serif;   
+    font-weight:400;
+    font-size:14px;
+    color:#212121;
+    background-color:#fff;
+}
+       
+@import 'header','mainslide';

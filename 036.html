@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="list">
+        <li>LIST 1</li>
+        <li>LIST 2</li>
+        <li>LIST 3</li>
+        <li>LIST 4</li>
+    </ul>
+    <ul class="list">
+        <li>LIST 1</li>
+        <li>LIST 2</li>
+        <li>LIST 3</li>
+        <li>LIST 4</li>
+    </ul>
+    <script>
+        let list = document.querySelectorAll('.list');
+        console.log(list);
+        list[1].style.color = 'red'
+        
+        let fruit = ['banana','melon','berry','mango','watermelon','lemon','grape'];
+        let greeting = 'hello world';
+        console.log(`I like ${fruit[0]}`)
+        console.log(`I like ${fruit[1]}`)
+        console.log(`I like ${fruit[2]}`)
+        console.log(`I like ${fruit[3]}`)
+        console.log(`I like ${fruit[4]}`)
+        console.log(`I like ${fruit[5]}`)
+        console.log(fruit.length)
+        console.log(greeting.length)
+
+        for(let i=0;i < fruit.length ;i++) {
+            console.log(`I like ${fruit[i]}`)
+        }
+
+        // 1, 100 
+        let sum = 0;
+        for(let i=1;i<=100;i++){ 
+            sum = sum + i;
+            console.log(sum)
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            width: 100%;
+            margin:0; padding:0;
+            overflow-x: hidden;
+        }
+
+
+        header {
+            background:coral;
+            height:100px;
+        }
+        .wrap1 {
+            outline:1px solid red;
+            width:500px;
+            margin:50px auto;
+        }
+
+        .wrap1 img{
+            float: right;
+            width: 200px;
+            margin-right: 10px;
+        }
+
+        
+        .p {
+            background:peru;  
+            clear:both;
+        }
+        .script {
+            background:palevioletred;
+            
+        }
+        footer {
+            background:olivedrab;
+            height:100px; 
+        }
+
+        .wrap2 {
+            width:500px;
+            outline:1px solid red;
+            margin:50px auto; 
+        }
+
+        .clearfix:after {
+            content:'';
+            display:block;
+            clear:both;
+        }
+
+
+        .clear {
+            clear:both;
+            background:Red;
+        }
+        .wrap2 div {
+            width:100px;
+            height:100px;
+            background:peru;
+            float:right;
+        }
+
+        .wrap2 div:nth-child(even) {
+            background:plum;
+        }
+
+        .wrap3 {
+            width: 500px;
+            outline: 1px solid red;
+            margin: 50px auto;
+        }
+
+        .wrap3 div {
+            width: 150px;
+            height: 100px;
+            background-color:powderblue;
+        }
+
+        .wrap3 .a{
+            float: left;
+            margin-right: 25px;
+        }
+
+        .wrap3 .b{
+            float: left;
+        }
+
+       .wrap3 .c{
+        float: right;
+       }
+
+       .wrap4{
+           width: 100%;
+           max-width: 600px;
+           outline: 1px solid red;
+           margin: 50px auto;
+       }
+
+       .wrap4 div{
+           background-color:salmon;
+           width: calc((100% - 50px) / 3);
+           height: 100px;
+       }
+
+       .wrap4 .a{
+           float: left;
+           margin-right: 25px;
+       }
+
+       .wrap4 .b{
+            float: left;
+            background:olivedrab;
+       }
+
+       .wrap4 .c{
+           float: left;
+       }
+
+       @media all and (max-width:600px){
+           .wrap4 .a, 
+           .wrap4 .b {
+               width: calc(50% - 12.5px);
+               margin-bottom:25px;
+            }  
+           
+            .wrap4 .c{
+                float: none;
+                clear:both;
+                width: auto;   
+            }
+       }
+
+       @media all and (max-width:375px){
+            .wrap2 {
+                width: auto;
+                margin:50px 7vw;
+            }
+
+            .wrap2 div{
+                width: 20%;
+            }
+
+            /* .wrap3 {
+                width: calc(100% - 20px);
+                padding:10px;
+                border:10px solid black;
+                box-sizing:border-box;
+                margin:50px 10px;
+            } */
+            .wrap3 {
+                width: calc(100% - 60px);
+                padding:10px;
+                border:10px solid black; 
+                margin:50px 10px;
+            }
+
+            .wrap3 div{
+                width: calc( (100% / 3) - 5px);
+            }
+
+            .wrap3 .a{
+                margin-right:7.5px
+            }
+
+
+
+
+
+           .wrap4 .a{
+               float: none;
+               width: auto;
+               margin-right:0;
+           }
+
+           .wrap4 .b{
+               float: none;
+               width: auto;
+           }
+       }
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>HEADER</header>
+    <div class="wrap1">
+        <img src="./images/dummy_1.jpg" alt="">
+        <div class="script">HELLO WORLD</div>
+        <p class="p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, aliquam? Labore, blanditiis pariatur? Reprehenderit reiciendis impedit perspiciatis eveniet adipisci nesciunt sit odio accusantium, facere cupiditate saepe voluptatum architecto consequuntur molestias.
+        </p>
+    </div>
+    
+    <div class="wrap2 clearfix">
+        <div>BOX 1</div> 
+        <div>BOX 2</div> 
+        <div>BOX 3</div> 
+        <div>BOX</div> 
+        <div>BOX</div> 
+        <div>BOX</div> 
+        <div>BOX</div> 
+        <div>BOX</div> 
+        <div>BOX</div> 
+        <div>BOX</div>  
+    </div> 
+   
+    <div class="wrap3 clearfix">
+        <div class="a">BOX 1</div>
+        <div class="b">BOX 2</div> 
+        <div class="c">BOX 3</div> 
+    </div> 
+
+    <div class="wrap4 clearfix">
+        <div class="a">BOX 1</div>
+        <div class="b">BOX 2</div> 
+        <div class="c">BOX 3</div> 
+    </div> 
+   
+    <footer>FOOTER</footer>
+</body>
+</html>

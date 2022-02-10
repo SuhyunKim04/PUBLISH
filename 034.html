@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const a = 5;
+        const b = 3;
+        const result = Math.abs(a - b);
+
+        console.log(result);
+        if(a>b) {
+            console.log(`a is bigger than b ${result}`)
+        } else {
+
+            console.log(`b is bigger than a ${result}`)
+        }
+        
+        console.log(a%b) 
+        const c = 9;
+        const math = c%2
+        console.log(math)
+        if( math == 0){
+            console.log('짝수이다')
+        } else {
+            console.log('홀수이다')
+        }
+
+        // ==
+        // >=
+        // <=
+        // !=
+        const d = 1;
+        const e = '1';
+        console.log(d === e)
+
+        // and(&&) , or(||) , not(!)
+        const f = !(  (a>b) && (a>c)  );
+        console.log(f);
+
+        (a>b) ? console.log('a is big') : console.log('b is big'); 
+        (math == 0) ? console.log('even') : console.log('odd')
+    </script>
+</body>
+</html>

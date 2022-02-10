@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * { margin:0; padding:0;}
+        ul, li { list-style:none;}
+        a { text-decoration:none; color:inherit;}
+        body {
+            height:3000px;
+        }
+        .wrap{ 
+            background-image:url('./images/dummy_2.jpg');
+            width:500px;
+            height:500px;
+            margin:50px auto;
+            position:relative;
+             
+        }
+
+        h1,h2,h3,h4 {display:none;}
+
+        h1 {
+            background:olivedrab;
+            height:100px; 
+            position:absolute;
+            left:0;top:0;
+            z-index:2;
+        }
+
+        h2 {
+            height:300px;
+            background:coral;
+            position:fixed;
+            left:100px;top:10px;
+            z-index:1;
+        }
+
+        h3 {
+            height:150px;
+            background:gold; 
+            z-index:4;
+        }
+
+        h4 {
+            background:pink;
+            height:170px;
+            position:relative;
+            z-index:4; 
+            left:10px; top:10px;
+        }
+
+        .btn {
+            display:block;
+            background:rgba(255,255,255,0.7);
+            border-radius:30px;
+            border:1px solid #ddd;
+            width:100px;
+            text-align:center;
+            height:40px;
+            /* font-size:12px;
+            font-family:sans-serif; */
+            font:bold italic 12px/40px sans-serif;
+            position:absolute;
+            top:calc(50% - 20px);
+            z-index:10;
+        }
+
+        .ico1 {
+            position: absolute;
+            background:red;
+            line-height:1;
+            top:-17px;
+            left:50%;
+        }
+
+        .ico2 {
+            position: absolute;
+            line-height:1;
+            bottom:-17px;
+            left:50%;
+        }
+
+        .btn.prev {left:10px;}
+
+        .btn.next { right:10px;}
+
+        footer {
+            height:100px;
+            background:dodgerblue;
+        }
+
+        .circle {
+            width:100px;height:100px;
+            border-radius:50%;
+            background:rgba(255,255,0,0.5);
+            text-align:center;color:#fff;
+            line-height:100px;
+            position: absolute;
+            left:calc(50% - 50px);top:calc(50% - 50px);
+        }
+
+        .pager {
+            background:rgba(0,0,0,0.7);
+            color:#fff;
+            border:1px solid rgba(255,255,255,0.8);
+            border-radius:30px; 
+            display:flex;
+            justify-content:space-evenly;
+            height:25px;
+            align-items:center;
+            width:30%;
+            font:10px arial,sans-serif; 
+            position: absolute;
+            right:50%;
+            transform:translateX(50%);
+            bottom:30px;
+        }
+
+        .pager a {
+            transition:all 0.4s;
+        }
+        .pager a.on, .pager a:hover {
+             color:gold;
+             font-weight:600;
+        }
+
+        
+    </style>
+
+</head>
+<body>
+    
+    <div class="wrap"> 
+        <h4>RELATIVE</h4>
+        <h1>ABS</h1>
+        <h2>FIXED</h2>
+        <h3>h3</h3>
+        <a href="#" class="btn prev">
+            PREV
+            <span class="ico1">🐹</span>
+        </a>
+        <a href="#" class="btn next">
+            NEXT
+            <span class="ico2">🐼</span>
+        </a>
+
+        <div class="circle">CIRCLE</div>
+
+        <div class="pager">
+            <a href="#" class="on">01</a>
+            <a href="#">02</a>
+            <a href="#">03</a>
+            <a href="#">04</a>
+        </div>
+    </div>
+    <footer>
+        COPYRIGHT &COPY;
+    </footer>
+</body>
+</html>

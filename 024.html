@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEX</title>
+    <style>
+        .box {
+            max-width:500px;
+            height:200px;
+            outline:1px solid red;
+            margin:50px auto;
+        }
+
+        .a {
+            background-color:mediumseagreen;
+        }
+        .b {
+            background-color:coral;
+        }
+        .c {
+            background-color:goldenrod;
+        }
+        .d {
+            background-color:dodgerblue;
+        }
+
+        .row{
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-direction:column;
+        }
+
+        .row .a {
+            flex-grow:2;
+            flex-shrink:1;
+            /* flex-basis:100px; */
+            height:100px;
+            width:100px;
+        }
+
+        .row .b{
+            /* align-self: center; */
+            /* flex-grow:0;
+            flex-shrink:2;
+            flex-basis:100px; */
+            /* 
+                flex:0 1 auto;
+            */
+            flex:0 2 100px;
+            /* flex:1; */
+            /* flex:1 2 auto */
+        }  
+
+        .row .c{
+            /* align-self: flex-end;  */
+            flex-grow:1;
+            flex-shrink:2;
+            flex-basis:100px;
+        }
+        
+        .row .d {
+            flex-grow:2;
+            flex-shrink:1;
+            flex-basis:100px;
+        }
+
+        .d {
+            background-color:dodgerblue;
+        }
+
+        .column{
+            width:100%;
+            max-width:500px;
+            display: flex;
+            justify-content: space-between;
+            height:320px;
+        }
+
+        .column div {
+             transition:all 0.4s;
+        }
+
+        .column .a {
+             width: 120px;
+        }
+        .column .b {
+             width: 80px;
+             margin: 0 2% 0 5%;
+
+             /* 10px / 500 * 100 */
+        }
+        .column .c {
+             width: 35px;
+             margin-right:5%;
+        }
+        .column .d {
+             width: 200px;
+        }
+
+
+        @media all and (max-width:385px) {
+            .column .b, .column .c {
+                margin:0;
+            }
+            .column .a,
+            .column .b,
+            .column .c,
+            .column .d {
+                flex-grow:1;
+                width:auto;
+            }
+        }
+        
+        @media all and (max-width:320px) {
+            .column {
+                flex-wrap:wrap;
+            }
+            .column .a,
+            .column .b,
+            .column .c,
+            .column .d {
+                flex-grow:1;
+                width:50%; 
+            }
+        }
+        
+
+        
+    </style>
+</head>
+<body>
+    <div class="box row">
+        <div class="a">A</div>
+        <div class="b">B</div>
+        <div class="c">C</div>
+        <div class="d">D</div>
+    </div>
+    <div class="box column">
+        <div class="a">A</div>
+        <div class="b">B</div>
+        <div class="c">C</div>
+        <div class="d">D</div>
+    </div>
+</body>
+</html>

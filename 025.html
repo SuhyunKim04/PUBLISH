@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        body {
+            padding:20px; 
+        }
+        .gnb{
+            outline:1px solid red;
+            max-width: 600px;
+            height: 150px;
+            display: flex; 
+            flex-wrap:wrap;
+        }
+
+        .gnb li {
+            /* flex-grow:0;  default value */ 
+            /* flex-shrink:1 default value */
+            /* width:20%; */
+        }
+
+        .gnb .a{
+            background-color: darkturquoise;
+            flex-grow: 1;
+            width:50%;
+        }
+
+        .gnb .b{
+            background-color: gold;
+            flex-grow: 1;
+            width:50%;
+        }
+
+        .gnb .c{
+            background-color: tomato;
+            /* flex-grow: 2; */
+            /* flex-basis:200px; */
+            flex-shrink:0;
+            width:100%;
+        }
+
+        .gnb .d{
+            background-color: blueviolet;
+            flex-grow: 1;
+            width:50%;
+        }
+
+        .gnb .e{
+            background-color: rgb(72, 72, 177);
+            flex-grow: 1;
+            width:50%;
+        }
+        .gnb .f{
+            background-color: pink;
+            flex-grow: 1; 
+        }
+ 
+        .wrap {
+            display:flex;
+            width:100%;
+            height:300px;
+            margin:50px auto;
+            outline:1px solid red;
+            flex-direction:row-reverse;
+            
+        }
+
+        .wrap .a {
+            background:gold;
+            width:200px;
+            flex-grow:1;
+            /* flex-shrink:2; */
+        }
+        .wrap .b {
+            background:olive;
+            width:100px; 
+            /* flex-shrink:0; */
+            flex-grow:1;
+        }
+        .wrap .c {
+            background:lightblue;
+            width:200px;
+            flex-grow:1;
+            /* flex-shrink:2; */
+        }
+    </style>
+</head>
+<body>
+    <ul class="gnb">
+        <li class="a">A </li>
+        <li class="b">B</li>
+        <li class="c">C</li>
+        <li class="d">D</li>
+        <li class="e">E</li>
+        <li class="f">F</li>
+    </ul> 
+
+    <div class="wrap">
+        <div class="a">A</div>
+        <div class="b">B</div>
+        <div class="c">C</div>
+    </div>
+</body>
+</html>

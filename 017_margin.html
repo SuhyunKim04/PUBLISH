@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            background:yellow;  
+            margin:50px;
+        }
+        .wrap div { background-color:coral;}
+        .wrap div:first-child { margin:0 30px 30px; padding-top:30px; }
+        .wrap div:nth-child(2) { margin:10px; }
+        .wrap div:last-child { margin:50px 50px 0; padding-bottom:50px;}
+
+        .box {
+            background-color:palegreen;
+            width:50%;
+            text-align:center;
+            /* margin:0 auto; */
+            margin: 0 0 0 auto;
+            /* border: 1px dotted black; */
+            /* border:3px double red; */
+            /* border-style:double; */
+            /* border-width:3px; */
+            /* border-color:red; */
+            border:0; /* border-width:0; */
+            border:none; /* border-style:none */
+            /* border-right: 1px dashed blue;
+            border-bottom: 1px dashed red;
+            border-top: 1px dashed red;
+            border-left: 1px dashed red; */
+
+            border:1px dashed red;
+            border-right-color:blue;
+
+        }
+
+        .triangle {
+            width:0; height:0; 
+            border:20px solid blue;
+            border-color:transparent transparent transparent #333;
+            position:absolute;
+            right:-32px;
+            top:20px;
+            transition:all 0.4s;
+        }
+
+        .textBox {
+            background-color:#333;
+            border-radius:10px;
+            padding:20px;
+            color:#fff;
+            width:50%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            position:relative;
+            transition:all 0.4s;
+        }
+
+        .textBox:hover {
+            background-color:dodgerblue;
+        }
+        .textBox:hover .triangle  {
+            border-left-color:dodgerblue; 
+        }
+
+        .textBox.me {
+            margin: 20px 0 10px auto;
+        }
+
+        .textBox.me .triangle {
+            border-color: transparent #333 transparent transparent;
+            /* right: calc(100% - 8px); */
+            right:auto;
+            left:-32px; 
+        }
+
+        .textBox.me:hover .triangle {
+            border-right-color:dodgerblue;
+        }
+
+        .box2 {
+            width:100px;height:100px;
+            background:coral;
+            border-radius:10px 20px 30px 40px;
+            border-radius:10px 30px 0;
+            border-radius:10px 0;
+            border-radius:30px;
+            border-radius:50%;
+            overflow:hidden;
+        }
+
+        .box2 img {
+            width:200px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="wrap"> 
+        <div>HELLO</div>
+        <div>HELLO</div>
+        <div>HELLO</div>
+    </div>
+
+
+    <div class="box">HELLO BOX</div>
+
+    <div class="textBox">
+        HELLO WORLD<br>
+        HAPPY WORK PLACE
+        <div class="triangle"></div>
+    </div>
+    <div class="textBox me">
+        HELLO WORLD<br>
+        HAPPY WORK PLACE
+        <div class="triangle"></div>
+    </div>
+ 
+    <div class="box2">
+        <img src="./images/dummy_3.jpg" alt="">
+    </div>
+ 
+</body>
+</html>

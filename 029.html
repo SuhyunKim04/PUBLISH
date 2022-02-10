@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java script</title>
+</head>
+<body>
+    <h1 class="heading">029 DOCUMENT HELLO</h1>
+    <button type="button" onclick="scoreCheck()">CHECK MY SCORE</button>
+    <script>
+        function scoreCheck() {
+            let score = 100;
+            let result = document.querySelector('.heading');
+
+            if( score >= 90) {
+                if( score > 100 ) {
+                    // console.log('score is wrong')
+                    result.innerHTML  = 'score is wrong'
+                } else { 
+                    result.innerHTML = 'A'
+                }
+            } else if( score >= 60) {
+                console.log('B')
+            } else if( score >= 1){
+                console.log('F')
+            }   else {
+                console.log('Fail')
+            }
+        }
+
+        // scoreCheck();
+       
+     </script>
+    <script src="./test.js"></script>
+</body>
+</html>

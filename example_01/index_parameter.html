@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style_test.css">
+    <title>Assignment 1</title>
+</head>
+<body>
+        
+    <ul class="emojis1"></ul>
+    <ul class="emojis2"></ul>
+    <ul class="emojis3"></ul>
+
+ 
+
+
+    <script>
+        function createEmoji(emoji, limit, name){
+            const emojis = document.querySelector(name);
+            let code = emoji;
+            let count = limit;  
+    
+            for(let i = code; i < code + count; i++) {
+                emojis.innerHTML += `<li>&#${i} ${i}</li>`
+            }
+
+            console.log(
+                `${code} has ${emojis.querySelectorAll('li').length}`
+            )
+        }
+
+        // createEmoji(127793);   
+        createEmoji(127793, 10, '.emojis1');   
+        createEmoji(127800, 20, '.emojis2');   
+        createEmoji(127900, 30, '.emojis3');   
+    </script>
+    
+</body>
+</html>

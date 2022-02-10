@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style_test.css">
+    <title>Assignment 1</title>
+</head>
+<body>
+   <h1 class="age">2000 생 일때 한국나이랑 현재나이 구하기</h1>
+ 
+
+
+    <script> 
+         
+
+    calcAge(2000,'우유');
+    calcAge(1990,'수현');
+
+
+    function calcAge(year, name){
+        const birth = year;
+        const ini = name;
+        const now = new Date().getFullYear(); 
+        let age = now - birth;
+        console.log(`${name} is ${age} and korean age is ${age+1}`)
+    }
+    </script>
+    
+</body>
+</html>

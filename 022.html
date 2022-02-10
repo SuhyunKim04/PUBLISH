@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    body, ul, li { margin:0; padding:0; list-style:none;}
+    a { text-decoration:none; color:inherit;}
+    body {
+        font-family:sans-serif;
+    }
+
+    .clearfix:after{
+        content:'';
+        display: block;
+        clear: both;
+    }
+
+    .gnb {
+        border:1px solid #ddd;
+        border-width:1px 0;
+        padding:10px 0;
+        font-size:0.9375em; /* 15px -> 15/16*100 = 0.9375 */
+    }
+
+    .gnb .inner { 
+        max-width:1000px;
+        margin: 0 auto;
+        position: relative;
+    }
+    
+
+    .gnb .fix, .gnb .btnMore,
+    .gnb .favorite,
+    .gnb ul li {
+        float:left;
+    }
+
+    .gnb .fix {
+        color:olivedrab;
+    }
+
+    .gnb li {
+        margin-right:10px;
+    }
+
+
+    .gnb .weather {
+        position: absolute;
+        right:0;top:50%;
+        transform:translateY(-50%);
+    }
+
+   
+    
+</style>
+<body>
+   <h1><a href="#">naver</a></h1>
+    <!-- ul.wrap1.clearfix>li*8 --> 
+    <!-- div.box#box*5 -->  
+    <!-- div.box+div --> 
+    <!-- article>header>h2+p+div.box  -->
+
+
+    <nav class="gnb">
+        <div class="inner clearfix"> 
+            <ul class="fix">
+                <li><a href="#">Mail</a></li>
+                <li><a href="#">Cafe</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">iN</a></li>
+                <li><a href="#">Shopping</a></li>
+                <li><a href="#">Shopping LIVE</a></li>
+                <li><a href="#">Pay</a></li>
+                <li><a href="#">TV</a></li>
+            </ul>
+
+            <ul class="favorite">
+                <li><a href="#">사전</a></li>
+                <li><a href="#">뉴스</a></li>
+                <li><a href="#">증권</a></li>
+                <li><a href="#">부동산</a></li>
+                <li><a href="#">지도</a></li>
+                <li><a href="#">VIBE</a></li>
+                <li><a href="#">책</a></li>
+                <li><a href="#">웹툰</a></li>
+            </ul>
+
+            <a href="" class="btnMore">View more</a>
+            <div class="weather">
+                13.0 맑음(낮)
+            </div>
+        </div>
+    </nav>
+</body>
+</html>

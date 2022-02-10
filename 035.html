@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        switch('D') {
+            case 'A':
+                console.log('You get A');
+                break;
+            case 'B':
+                console.log('You get B');
+                break;
+            case 'C':
+                console.log('You get C');
+                break;
+            default:
+                console.log('You get nothing')
+                break;
+        }
+
+        const date = new Date().getDay();
+        console.log(date);
+        switch(date-1) {
+            case 5:
+                console.log('Today is Friday');
+                break;
+            case 6:
+                console.log('Today is Saturday');
+                break;
+            default:
+                break;
+        }
+    </script>
+</body>
+</html>

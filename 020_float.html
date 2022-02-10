@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap { background:yellow;}
+        .left {
+            width:200px;
+            background:Green;
+            float:left;
+            height:50px;
+        }
+
+        .right {
+            width:200px;
+            background:orange; 
+            float:right;
+            height:50px;
+        }
+        footer {
+            background:red;
+            height:200px;
+        }
+        
+       
+        .clearfix:after {
+            content:'';
+            display:block; /* display:table */
+            clear:both;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrap clearfix">
+        <div class="left">LEFT</div>
+        <div class="right">RIGHT</div>   
+    </div> 
+    <footer>
+        COPYRIGHT
+    </footer>
+ 
+</body>
+</html>
