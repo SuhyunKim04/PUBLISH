@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // And, OR, Not
+        let kor = 100;
+        let eng = 70;
+        let math = 50;
+
+        let result = !((kor>=60)  || (eng>=60));
+        console.log(result)
+
+
+        //condition  ? true logic  : false logic;
+        let sum = kor + eng + math;
+        let avg = Math.floor(sum/3);
+        (avg >= 70) ? console.log('합격') : console.log('불합격');
+        !((avg >= 70) && ((math >= 90) || (kor >= 90))) ? console.log('불합격') : console.log('합격') 
+    </script>
+</body>
+</html>

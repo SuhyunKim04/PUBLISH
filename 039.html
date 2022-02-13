@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div { color : blue;}
+        div.wrap  { background-color:gold;}
+    </style>
+</head>
+<body>
+    <div class="blue">
+        HELLO WORLD
+    </div>
+    <script>
+        let a = 15;
+        let b = 12;
+
+        if (a > b){
+         console.log('a 가 크다')
+        }else if(a == b){
+            console.log('a 와 b가 같다')
+        }else {console.log('b가 크다')}
+        
+        (a > b) ? console.log('a is big') : console.log('b is big or both equal')
+        
+        const div = document.querySelector('div');
+      
+
+        checkClass();
+        function checkClass() { 
+            const class_name = div.className;
+            if( class_name == 'blue') {
+                div.style.backgroundColor = 'blue',
+                div.style.color = '#fff'
+            } else if(class_name == 'red') {
+                div.style.backgroundColor = 'red'
+            }
+        }
+
+        if( div.classList.contains('red') ) {
+            console.log('div has red class name.')
+        } else {
+            console.log('div doesnt has red class name.')
+        }
+        div.classList.replace('blue','red')
+        checkClass();
+        //  console.log(class_name);
+        // console.log(document.querySelector('.box'));
+        // div.classList.remove('.wrap')
+        // console.log(document.querySelector('.box'));
+        // const box = document.querySelector('.box');
+
+        // box.style.fontSize = '100px';
+
+    </script>
+</body>
+</html>

@@ -7,26 +7,69 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style_test.css">
     <title>Assignment 1</title>
+    <script src="http://code.jquery.com/jquery-1.11.2.js"></script>
+    <script> 
+        $(function() {
+            const $age = $('.age');
+           
+            const age2 = document.querySelector('.age2');
+            console.log('age2')
+            const btn = document.querySelector('.getAge');
+            const $btn = $('.getAge2')
+
+            age2.style.fontSize="14px"
+            age2.style.color="green"
+
+            $age.css({ 
+                color : 'blue',
+                fontSize : '50px'
+            })
+
+            btn.addEventListener('click', function() {
+                calcAge(2000,'choco')
+            })
+
+            $btn.click(function() {
+                calcAge(1998,'hello')
+            })
+            
+        })
+    </script>
 </head>
 <body>
    <h1 class="age">2000 생 일때 한국나이랑 현재나이 구하기</h1>
+   <h1 class="age2">2000 생 일때 한국나이랑 현재나이 구하기</h1>
  
+   <div class="wrap">
+       <h2>hello</h2>
+       <h3>world</h3>
+   </div>
+
+   <button type="button" class="getAge">GET AGE</button>
+   <button type="button" class="getAge2">GET AGE2</button>
 
 
     <script> 
-         
+          
 
-    calcAge(2000,'우유');
-    calcAge(1990,'수현');
+    // calcAge(2000,'우유');
+    // calcAge(1990,'수현');
 
-
-    function calcAge(year, name){
+  
+function calcAge(year, name){
         const birth = year;
         const ini = name;
         const now = new Date().getFullYear(); 
         let age = now - birth;
         console.log(`${name} is ${age} and korean age is ${age+1}`)
     }
+
+ 
+    document.querySelector('.box.list > h1')
+    const wrap = document.querySelector('.wrap')
+    const h2 = wrap.querySelector('h2')
+    const h3 = wrap.querySelector('h3')
+    
     </script>
     
 </body>
