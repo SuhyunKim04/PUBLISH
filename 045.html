@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <pre>
+        <code>
+            findLetter('a');
+            // This sentence has 4 "a"
+
+            findLetter('b')
+            // This sentence has 2 "b"
+        </code>
+    </pre>
+
+    <pre>
+        <code>
+           <input type="text"><button type="button" onclick="findLetter2();">find Letter</button>
+        </code>
+    </pre>
+    <script>
+        let text = 'hello javascript and you And me'
+        let count = 0;
+
+        // console.log(text.length);
+        console.log(text[1])
+
+        for(let i = 0; i < text.length; i++){
+            console.log(text[i])
+
+            if(text[i] == 'a' || text[i] == 'A'){
+                count++
+            }
+        } 
+
+       
+        console.log(`This sentence has ${count} "a"`)
+
+
+        // 2 : even 
+    </script>
+</body>
+</html>

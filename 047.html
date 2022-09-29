@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>LOGO <b>COMPANY</b></h1>
+    <ul class="list">
+
+    </ul>
+
+    <script>
+        let h1 = document.querySelector('h1');
+        let menu = ['HOME','COMPANY','PRODUC', 'CONTACT'];
+        const ul = document.querySelector('.list')
+        let lists ='';
+        for(let i=0; i < menu.length; i++){
+             lists = lists + `<li>${menu[i]}</li>`
+             console.log(lists)
+        }
+
+        ul.innerHTML = lists; 
+
+
+        let script = '';
+        script = 'a';
+        console.log(script);
+
+        script = script + 'hello';
+        console.log(script);
+
+
+        let li = document.createElement('li');
+        ul.appendChild(li).innerHTML = 'hello'
+  
+
+      
+ 
+       
+    </script>
+</body>
+</html>

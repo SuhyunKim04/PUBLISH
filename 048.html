@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array </h1>
+    <script>
+        let friends = [3,'apple', 'melon', 'lemon', true];
+        for(let friend of friends) {
+            console.log(friend)
+        }
+        
+        // console.log(friends)
+        // console.log(friends.length)
+        // console.log(typeof(friends[0]))
+        // console.log(typeof(friends[1]))
+
+        // for(let i = 0; i < friends.length; i++){
+        //     console.log(typeof(friends[i]))
+        // }
+
+     
+        let fruits = ['apple','melon','lemon'];
+        for(let i = 0; i < fruits.length; i++){
+            console.log(fruits[i])
+        }
+        for(let fruit of fruits) {
+            console.log(fruit)
+        }
+
+        console.clear()
+        let pets = ['Dog', 'Cat', 'Rabbit'];
+        let addPets = ['hamster','bird'];
+        let newPets = pets.concat(addPets);
+        pets.push('Bird');
+        pets.push('Lion')
+        pets.pop();
+        pets.pop();
+        pets.unshift('Bird')
+        pets.shift()
+ 
+
+        for(let pet of pets){
+            console.log(`Hello ${pet}, ${pet.length}, ${pet[0]}`);
+            // console.log(`The last spell is ${pet[pet.length -1]}`)
+        }
+
+
+        // console.log(pets[0][0]);
+        // console.log(`My favorite pet is ${pets[pets.length-1]} the last one.`)
+        console.log(`My favorite pet is ${pets[0]} the First one.`)
+        console.log(`pets : ${pets}, addPets : ${addPets}, newPets : ${newPets}`);
+
+        console.log(newPets);
+        newPets.splice(1); // 2 번째부터 모두 삭제 , Dog 
+        console.log(newPets);
+        newPets = pets.concat(addPets);
+        newPets.splice(0,2); // rabbit, hamster, bird
+        console.log(newPets);
+        newPets = pets.concat(addPets);
+        newPets.splice(1,2,'parret','lion');
+        console.log(newPets);
+
+        newPets = pets.concat(addPets);
+        console.log(newPets.join(', '))
+
+    </script>
+</body>
+</html>

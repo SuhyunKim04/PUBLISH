@@ -10,8 +10,8 @@
     <script>
         // And, OR, Not
         let kor = 100;
-        let eng = 70;
-        let math = 50;
+        let eng =  90;
+        let math = 79;
 
         let result = !((kor>=60)  || (eng>=60));
         console.log(result)
@@ -22,6 +22,37 @@
         let avg = Math.floor(sum/3);
         (avg >= 70) ? console.log('합격') : console.log('불합격');
         !((avg >= 70) && ((math >= 90) || (kor >= 90))) ? console.log('불합격') : console.log('합격') 
+
+        const subject = [kor, eng, math]
+
+        console.clear();
+         if(avg >= 70 && !(math <= 60  || eng <= 60 || kor <= 60)) {
+                console.log('합격');
+         }  else {
+            console.log ('불합격')
+         }
+
+         console.clear();
+         if( avg>=70) {
+             console.log('1step passed');
+             if(math >= 60  && eng >= 60 && kor >= 60) {
+                 console.log('passed')
+             } else {
+             console.log('final fail')
+            }
+         } else {
+             console.log('1step failed')
+        }
+
+        
+
+        if(avg < 90 || (math <= 80  || eng <= 80 || kor <= 80)) {
+                console.log('불합격');
+         }  else {
+            console.log ('합격')
+         }
+
     </script>
+
 </body>
 </html>
